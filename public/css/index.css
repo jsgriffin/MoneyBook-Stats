@@ -1,48 +1,48 @@
 * {
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-	font-family: Book Antiqua;
+    font-family: Book Antiqua;
 }
 
 
 #title, #content {
-	position: absolute;
-	top: 50px;
+    position: absolute;
+    top: 50px;
 }
 
 #title {
-	left: 0px;
-	width: 350px;
+    left: 0px;
+    width: 350px;
 }
 
 #content {
-	left: 450px;
-	font-size: 24px;
+    left: 450px;
+    font-size: 24px;
 }
 
 #title h1 {
-	font-weight: normal;
-	font-size: 60px;
-	text-align: right;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: right;
 }
 
 #content ol {
-	list-style-type: lower-roman;
+    list-style-type: lower-roman;
 }
 
 #content li {
-	margin: 0px 0px 50px 20px;
+    margin: 0px 0px 50px 20px;
 }
 
 #content li p {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #content li img {
-	-webkit-box-shadow: 0px 0px 12px 2px #999999;
-	-moz-box-shadow: 0px 0px 12px 2px #999999;
-	box-shadow: 0px 0px 12px 2px #999999;
+    -webkit-box-shadow: 0px 0px 12px 2px #999999;
+    -moz-box-shadow: 0px 0px 12px 2px #999999;
+    box-shadow: 0px 0px 12px 2px #999999;
 }

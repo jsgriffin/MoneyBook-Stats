@@ -1,38 +1,38 @@
 <html>
-	<head>
-		<title>MoneyBook Stats</title>
-		<link href="/css/index.css" rel="stylesheet" type="text/css"></link>
-		
-	</head>
-	<body>
-		<% if error_message %>
-		<div id="error">
-			Make sure you upload a .csv file
-		</div>
-		<% end %>
-		
-		<div id="title">
-			<h1>MoneyBook Stats</h1>
-		</div>
-		
-		<div id="content">
-			<ol>
-				<li>
-					<p>Download your data from <a href="http://my.moneybookapp.com">http://my.moneybookapp.com</a></p>
-					<img src="http://f.cl.ly/items/420j3n2O1k2n0C422u2X/Screen%20shot%202011-07-02%20at%2013.36.38.png" alt="Use the Expot CSV button" />
-				</li>
-				<li>
-					<p>Upload.</p>
-					<form action="/" method="post" enctype="multipart/form-data">
-						<input type="file" name="csv_data" />
-						<input type="submit" value="Upload" />
-					</form>
-				</li>
-				<li>
-					Gain new insights into your spending habits.
-				</li>
-			</ol>
-		</div>
+    <head>
+        <title>MoneyBook Stats</title>
+        <link href="/css/index.css" rel="stylesheet" type="text/css"></link>
+        
+    </head>
+    <body>
+        <% if error_message %>
+        <div id="error">
+            Make sure you upload a .csv file
+        </div>
+        <% end %>
+        
+        <div id="title">
+            <h1>MoneyBook Stats</h1>
+        </div>
+        
+        <div id="content">
+            <ol>
+                <li>
+                    <p>Download your data from <a href="http://my.moneybookapp.com">http://my.moneybookapp.com</a></p>
+                    <img src="http://f.cl.ly/items/420j3n2O1k2n0C422u2X/Screen%20shot%202011-07-02%20at%2013.36.38.png" alt="Use the Expot CSV button" />
+                </li>
+                <li>
+                    <p>Upload.</p>
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <input type="file" name="csv_data" />
+                        <input type="submit" value="Upload" />
+                    </form>
+                </li>
+                <li>
+                    Gain new insights into your spending habits.
+                </li>
+            </ol>
+        </div>
 
-	</body>
+    </body>
 </html>

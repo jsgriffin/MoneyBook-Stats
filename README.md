@@ -18,3 +18,9 @@ You can export all your data from the [MoneyBook webapp](http://my.moneybookapp.
     sh merge_exports.sh -o output.csv moneybookexports/*.csv
     
 That will merge all the exports into output.csv, which can be uploaded to the app for visualising. 
+
+Todo
+----
+
+* Dynamic loading of visualisation source files
+* Handle page layout a bit more nicely

@@ -8,7 +8,6 @@ get '/' do
 end
 
 post '/' do
-  puts params[:csv_data][:tempfile]
   data = CSV.parse(params[:csv_data][:tempfile].read)
   if data
     data = data.drop(1)

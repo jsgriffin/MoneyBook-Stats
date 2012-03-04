@@ -1,67 +1,69 @@
 <html>
-	<head>
-		<title>Stats</title>
-		
-		<link href="/css/stats.css" rel="stylesheet" type="text/css"></link>
-		<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css"></link>
-	
-		<script type="text/javascript">
-			var data = <%= json_data %>;
-		</script>
-		<script type="text/javascript" src="/js/jquery.js"></script>
-		<script type="text/javascript" src="/js/jquery-ui.js"></script>
-		<script type="text/javascript" src="/js/protovis.min.js"></script>
-		<script type="text/javascript" src="/js/stats.js"></script>
-	</head>
-	<body>				
-		<div id="graphs">
-			<div class="inner">
-				<div id="title"><h1></h1></div>
-				<div id="types">
-					<select></select>
-				</div>
-				<div id="top-graph">
-				</div>
-				<div id="legend">
-					<div></div>
-				</div>
-			</div>
-		</div>
-		
-		<div id="totals">
-			<div class="inner">
-				<h2>Totals:</h2>
-				<p>Total incoming: <span id="total-incoming"></span></p>
-				<p>Total outgoing: <span id="total-outgoing"></span></p>
-				<p>Profit: <span id="profit"></span></p>
-			
-				<h2>Averages:</h2>
-				<p>Daily Average: <span id="daily-average-total"></span></p>
-			
-				<h2>Categories:</h2>
-				<div id="categories">
-				
-				</div>
-			</div>
-		</div>
-		
-		<div id="filters">
-			<div class="inner">
-				<div id="date-filters">
-					From: <input type="text" id="date-start" class="datepicker" />
-					To: <input type="text" id="date-end" class="datepicker" />
-				</div>
-				
-				<div id="upload">
-					<form method="post" action="/" enctype="multipart/form-data">
-						Upload a new data file: <input type="file" name="csv_data" /> <input type="submit" value="Upload" />
-					</form>
-				</div>
-				
-				<div id="filename">
-					<%= file_name %>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <title>Stats</title>
+        
+        <link href="/css/stats.css" rel="stylesheet" type="text/css"></link>
+        <link href="/css/jquery-ui.css" rel="stylesheet" type="text/css"></link>
+    
+        <script type="text/javascript">
+            var data = <%= json_data %>;
+        </script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="/js/protovis.min.js"></script>
+        <script type="text/javascript" src="/js/stats.js"></script>
+        <script type="text/javascript" src="/js/visualisations/categories.js"></script>
+        <script type="text/javascript" src="/js/visualisations/daily-totals.js"></script>
+    </head>
+    <body>              
+        <div id="graphs">
+            <div class="inner">
+                <div id="title"><h1></h1></div>
+                <div id="types">
+                    <select></select>
+                </div>
+                <div id="top-graph">
+                </div>
+                <div id="legend">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="totals">
+            <div class="inner">
+                <h2>Totals:</h2>
+                <p>Total incoming: <span id="total-incoming" class="total-amount"></span></p>
+                <p>Total outgoing: <span id="total-outgoing" class="total-amount"></span></p>
+                <p>Profit: <span id="profit" class="total-amount"></span></p>
+            
+                <h2>Averages:</h2>
+                <p>Daily Average: <span id="daily-average-total" class="total-amount"></span></p>
+            
+                <h2>Categories:</h2>
+                <div id="categories">
+                
+                </div>
+            </div>
+        </div>
+        
+        <div id="filters">
+            <div class="inner">
+                <div id="date-filters">
+                    From: <input type="text" id="date-start" class="datepicker" />
+                    To: <input type="text" id="date-end" class="datepicker" />
+                </div>
+                
+                <div id="upload">
+                    <form method="post" action="/" enctype="multipart/form-data">
+                        Upload a new data file: <input type="file" name="csv_data" /> <input type="submit" value="Upload" />
+                    </form>
+                </div>
+                
+                <div id="filename">
+                    <%= file_name %>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
